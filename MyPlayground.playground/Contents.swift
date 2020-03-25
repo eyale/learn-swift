@@ -1,4 +1,4 @@
-//import UIKit
+import UIKit
 //
 //var str = "Hello, playground"
 //print(str);
@@ -192,54 +192,214 @@
 //var shapeName = shape.getShapesName()
 //var shapeCorners = shape.getShapesCorners(corners: 4)
 
-class NamedShape {
-    var numberOfSides: Int = 0
-    var name: String
-    
-    init(name: String) {
-        self.name = name
-    }
-    
-    func simpleDescription() -> String {
-        return "A shape with \(numberOfSides) sides."
-    }
-}
-class Square: NamedShape {
-    var sideLength: Double
-    
-    init(sideLength: Double, name: String) {
-        self.sideLength = sideLength
-        super.init(name: name)
-        numberOfSides = 4
-    }
-    
-    func area() -> Double {
-        return sideLength * sideLength
-    }
-    
-    override func simpleDescription() -> String {
-        return "A square with sides of length \(sideLength)."
-    }
-}
-let test = Square(sideLength: 5.2, name: "my test square")
-test.area()
-test.simpleDescription()
+//class NamedShape {
+//    var numberOfSides: Int = 0
+//    var name: String
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//
+//    func simpleDescription() -> String {
+//        return "A shape with \(numberOfSides) sides."
+//    }
+//}
+//class Square: NamedShape {
+//    var sideLength: Double
+//
+//    init(sideLength: Double, name: String) {
+//        self.sideLength = sideLength
+//        super.init(name: name)
+//        numberOfSides = 4
+//    }
+//
+//    func area() -> Double {
+//        return sideLength * sideLength
+//    }
+//
+//    override func simpleDescription() -> String {
+//        return "A square with sides of length \(sideLength)."
+//    }
+//}
+//let test = Square(sideLength: 5.2, name: "my test square")
+//test.area()
+//test.simpleDescription()
+//
+//class Circle: NamedShape {
+//    var radius: Int
+//
+//    init(radius: Int, name: String) {
+//        self.radius = radius
+//        super.init(name: name)
+//    }
+//    func area() -> Double {
+//        return (Double(radius) * Double(radius)) * Double.pi
+//    }
+//
+//    override func simpleDescription() -> String {
+//        return "A \(self.name)'s area = \(area())"
+//    }
+//}
+//let circle = Circle(radius: 88, name: "My First Circle")
+//circle.area()
+//circle.simpleDescription()
 
-class Circle: NamedShape {
-    var radius: Int
+//let date = Date()
+//let formatter = DateFormatter()
+//formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+//formatter.timeZone = TimeZone(secondsFromGMT: 0)
+//formatter.locale = Locale(identifier: "en_US_POSIX")
+//print("\(date), \(formatter.string(from: date))")
+
+//var optional: String?
+//if let o = optional {
+//    print(o)
+//} else {
+//    print("o is nil")
+//}
+//
+//for i in 1...10 {
+//    print(i)
+//}
+
+//let dictArg: Dictionary = ["Joshua": "Dev", "Mattew": "PM", "Denis": "DevOps"]
+//var emploeeStatuses: [String] = []
+//for (_, val) in dictArg {
+//    emploeeStatuses.append(val)
+//}
+//print("Team full of: \(emploeeStatuses)")
+//
+//class Human {
+//    var name: String
+//    var age: Int
+//
+//    func greeting(name: String) -> String{
+//        return "Hi \(name)"
+//    }
+//    init(name: String, age: Int) {
+//        self.name = name
+//        self.age = age
+//    }
+//}
+//
+//var Max = Human(name: "Max", age: 20);
+//
+//Max.age
+//Max.name
+//Max.greeting(name: "Lola")
+//
+//class Employ: Human {
+//    var position: String
+//    var eyeColor: UIColor
+//
+//    override func greeting(name: String) -> String {
+//        return "Hello \(name). My name is \(self.name)."
+//    }
+//
+//    init(position: String) {
+//        self.position = position
+//        self.eyeColor = UIColor.green
+//        super.init(name: "Bob", age: 34)
+//    }
+//}
+//
+//let Bob = Employ(position: "iOS Developer")
+//Bob.position
+//Bob.name
+//Bob.age
+//Bob.eyeColor
+//Bob.greeting(name: "Colleagues")
+//
+//class Vehicles {
+//    var brands: [String: Int]
+//
+//    var countBrandsSpeed: Int {
+//        get {
+//            var sumSpeed = 0
+//            for (_, speed) in brands {
+//                sumSpeed = sumSpeed + speed
+//            }
+//            return sumSpeed
+//        }
+//        set(newSpeed) {
+//            var newBrands: [String: Int] = Dictionary()
+//
+//            for (brand, _) in brands {
+//                newBrands.updateValue(newSpeed/brands.count, forKey: brand)
+//            }
+//
+//            brands = newBrands
+//        }
+//    }
+//    init(brands: [String: Int]) {
+//        self.brands = brands
+//    }
+//}
+//
+//var cars = Vehicles(brands: ["Alfa Romeo": 240, "BMW": 220, "Mercedes Benz": 230])
+//cars.brands
+//cars.countBrandsSpeed
+//cars.countBrandsSpeed = 840
+//cars.brands
+
+
+protocol GirlsProptocol {
+    var name: String {get set}
+    var age: Int {get set}
     
-    init(radius: Int, name: String) {
-        self.radius = radius
-        super.init(name: name)
-    }
-    func area() -> Double {
-        return (Double(radius) * Double(radius)) * Double.pi
-    }
+    var delegate: SecretWatcherProtocol? {get set}
     
-    override func simpleDescription() -> String {
-        return "A \(self.name)'s area = \(area())"
+    func greetBoy(name: String) -> String
+    func sendMessage(phone: String, message: String) -> Bool
+    
+    init(name: String, age: Int)
+    init(name: String, age: Int, delegate: SecretWatcherProtocol?)
+}
+
+protocol SecretWatcherProtocol {
+    var messages: [String] {get set}
+    
+    func saveMessage(message: String)
+}
+
+class SecretWatcher: SecretWatcherProtocol {
+    var messages: [String] = []
+    
+    func saveMessage(message: String) {
+        messages.append(message)
     }
 }
-let circle = Circle(radius: 88, name: "My First Circle")
-circle.area()
-circle.simpleDescription()
+
+class Girl: GirlsProptocol {
+    var name: String
+    var age: Int
+    
+    var delegate: SecretWatcherProtocol?
+    
+    func greetBoy(name: String) -> String {
+        return "Hi, \(name)"
+    }
+    func sendMessage(phone: String, message: String) -> Bool {
+        delegate?.saveMessage(message: message)
+        return true
+    }
+    
+    required init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    required init(name: String, age: Int, delegate: SecretWatcherProtocol?) {
+        self.name = name
+        self.age = age
+        self.delegate = delegate
+    }
+}
+
+let SecretWatcherDelegate = SecretWatcher()
+let Alice = Girl(name: "Alice", age: 20, delegate: SecretWatcherDelegate)
+
+Alice.sendMessage(phone: "+380978898645", message: "What's up?")
+Alice.sendMessage(phone: "+380679888754", message: "Hello, Bibi. How are you")
+Alice.sendMessage(phone: "+380688958285", message: "Hi, mom")
+
+SecretWatcherDelegate.messages
