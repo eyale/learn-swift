@@ -1,5 +1,7 @@
 import UIKit
-//
+
+
+////Basis
 //var str = "Hello, playground"
 //print(str);
 //var name = "Honcharov Eyal"
@@ -133,7 +135,7 @@ import UIKit
 //}
 //var increment = makeIncrementer()
 //increment(8)
-
+////_____________________________________________________________________________
 //func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
 //    for item in list {
 //        if condition(item) {
@@ -143,11 +145,11 @@ import UIKit
 //    return false
 //}
 //func lessThanTen(number: Int) -> Bool {
-//    return number < 10
+//    return number < 2
 //}
 //var numbers = [20, 19, 7, 12]
 //hasAnyMatches(list: numbers, condition: lessThanTen)
-
+//_____________________________________________________________________________
 //var numbers = [2,3,5,1,4,6]
 //numbers.map({ (number: Int) -> Int in
 //    if number % 2 != 0 {
@@ -159,14 +161,14 @@ import UIKit
 //
 //let mappedNumbers = numbers.map({ number in 3 * number })
 //print(mappedNumbers)
-
+////_____________________________________________________________________________
 //var numbers = [2,3,5,1,4,6]
 //let mappedNumbers = numbers.map({ number in 3 * number })
 //print(mappedNumbers)
 //let sortedNumbers = numbers.sorted { $0 > $1 }
 //print(sortedNumbers)
 
-//
+////Classes_________________________________________________________________________
 //class Shape {
 //    var name: String
 //    var numberOfSlides: Int = 0
@@ -191,7 +193,7 @@ import UIKit
 //var shapeDesc = shape.simpleDescription()
 //var shapeName = shape.getShapesName()
 //var shapeCorners = shape.getShapesCorners(corners: 4)
-
+//
 //class NamedShape {
 //    var numberOfSides: Int = 0
 //    var name: String
@@ -243,14 +245,15 @@ import UIKit
 //let circle = Circle(radius: 88, name: "My First Circle")
 //circle.area()
 //circle.simpleDescription()
-
+//
+//// making ISO string____________________________________________________________
 //let date = Date()
 //let formatter = DateFormatter()
 //formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
 //formatter.timeZone = TimeZone(secondsFromGMT: 0)
 //formatter.locale = Locale(identifier: "en_US_POSIX")
 //print("\(date), \(formatter.string(from: date))")
-
+//
 //var optional: String?
 //if let o = optional {
 //    print(o)
@@ -261,7 +264,7 @@ import UIKit
 //for i in 1...10 {
 //    print(i)
 //}
-
+//
 //let dictArg: Dictionary = ["Joshua": "Dev", "Mattew": "PM", "Denis": "DevOps"]
 //var emploeeStatuses: [String] = []
 //for (_, val) in dictArg {
@@ -269,6 +272,7 @@ import UIKit
 //}
 //print("Team full of: \(emploeeStatuses)")
 //
+//// Inheritance _____________________________________________________________________
 //class Human {
 //    var name: String
 //    var age: Int
@@ -310,6 +314,7 @@ import UIKit
 //Bob.eyeColor
 //Bob.greeting(name: "Colleagues")
 //
+//// Computed properties _____________________________________________________________
 //class Vehicles {
 //    var brands: [String: Int]
 //
@@ -341,65 +346,134 @@ import UIKit
 //cars.countBrandsSpeed
 //cars.countBrandsSpeed = 840
 //cars.brands
+//
+//
+//// Protocols/Delegates________________________________________________________________
+//protocol GirlsProptocol {
+//    var name: String {get set}
+//    var age: Int {get set}
+//
+//    var delegate: SecretWatcherProtocol? {get set}
+//
+//    func greetBoy(name: String) -> String
+//    func sendMessage(phone: String, message: String) -> Bool
+//
+//    init(name: String, age: Int)
+//    init(name: String, age: Int, delegate: SecretWatcherProtocol?)
+//}
+//
+//protocol SecretWatcherProtocol {
+//    var messages: [String] {get set}
+//
+//    func saveMessage(message: String)
+//}
+//
+//class SecretWatcher: SecretWatcherProtocol {
+//    var messages: [String] = []
+//
+//    func saveMessage(message: String) {
+//        messages.append(message)
+//    }
+//}
+//
+//class Girl: GirlsProptocol {
+//    var name: String
+//    var age: Int
+//
+//    var delegate: SecretWatcherProtocol?
+//
+//    func greetBoy(name: String) -> String {
+//        return "Hi, \(name)"
+//    }
+//    func sendMessage(phone: String, message: String) -> Bool {
+//        delegate?.saveMessage(message: message)
+//        return true
+//    }
+//
+//    required init(name: String, age: Int) {
+//        self.name = name
+//        self.age = age
+//    }
+//    required init(name: String, age: Int, delegate: SecretWatcherProtocol?) {
+//        self.name = name
+//        self.age = age
+//        self.delegate = delegate
+//    }
+//}
+//
+//let SecretWatcherDelegate = SecretWatcher()
+//let Alice = Girl(name: "Alice", age: 20, delegate: SecretWatcherDelegate)
+//
+//Alice.sendMessage(phone: "+380978898645", message: "What's up?")
+//Alice.sendMessage(phone: "+380679888754", message: "Hello, Bibi. How are you")
+//Alice.sendMessage(phone: "+380688958285", message: "Hi, mom")
+//
+//SecretWatcherDelegate.messages
+//
+//// Error Handling________________________________________________________________
+//enum divideErors: Error {
+//    case divideZero
+//    case divideMinus
+//}
+//
+//func divide(i: Int, j: Int) throws -> Int {
+//    if j == 0 {
+//        throw divideErors.divideZero
+//    }
+//    if j < 0 {
+//        throw divideErors.divideMinus
+//    }
+//    return i/j
+//}
+//
+//try? divide(i: 15, j: 0)
+//
+//do {
+//    try divide(i: 15, j: -1)
+//} catch divideErors.divideMinus {
+//    print("You've tried")
+//} catch divideErors.divideZero {
+//    print("You'v tried")
+//}
+
+//Type convertion__________________________________________________________________
+//var someStr: String?
+//var randomArray: [Any?] = ["Hello", 123, nil, someStr, "Giulietta"]
+//
+//var sumString: String = ""
+//var sum: Int = 0
+//var countNil: Int = 0
+//
+//for i in randomArray {
+//    if i is String {
+//        sumString.append(i as! String)
+//    }
+//    if i is Int {
+//        sum = sum + (i as! Int)
+//    }
+//    if i == nil {
+//        countNil += 1
+//    }
+//}
+//
+//print("""
+//sumString: \(sumString)
+//sum: \(sum)
+//countNil: \(countNil)
+//""")
+
+//Static variables/methods__________________________________________________________
+//class Simple {
+//    static let singleton = Simple()
+//    static var str = "Static string"
+//
+//    class func staticZen() -> String {
+//        return "ZEN"
+//    }
+//}
+//
+//Simple.singleton
+//Simple.str
+//Simple.staticZen()
 
 
-protocol GirlsProptocol {
-    var name: String {get set}
-    var age: Int {get set}
-    
-    var delegate: SecretWatcherProtocol? {get set}
-    
-    func greetBoy(name: String) -> String
-    func sendMessage(phone: String, message: String) -> Bool
-    
-    init(name: String, age: Int)
-    init(name: String, age: Int, delegate: SecretWatcherProtocol?)
-}
-
-protocol SecretWatcherProtocol {
-    var messages: [String] {get set}
-    
-    func saveMessage(message: String)
-}
-
-class SecretWatcher: SecretWatcherProtocol {
-    var messages: [String] = []
-    
-    func saveMessage(message: String) {
-        messages.append(message)
-    }
-}
-
-class Girl: GirlsProptocol {
-    var name: String
-    var age: Int
-    
-    var delegate: SecretWatcherProtocol?
-    
-    func greetBoy(name: String) -> String {
-        return "Hi, \(name)"
-    }
-    func sendMessage(phone: String, message: String) -> Bool {
-        delegate?.saveMessage(message: message)
-        return true
-    }
-    
-    required init(name: String, age: Int) {
-        self.name = name
-        self.age = age
-    }
-    required init(name: String, age: Int, delegate: SecretWatcherProtocol?) {
-        self.name = name
-        self.age = age
-        self.delegate = delegate
-    }
-}
-
-let SecretWatcherDelegate = SecretWatcher()
-let Alice = Girl(name: "Alice", age: 20, delegate: SecretWatcherDelegate)
-
-Alice.sendMessage(phone: "+380978898645", message: "What's up?")
-Alice.sendMessage(phone: "+380679888754", message: "Hello, Bibi. How are you")
-Alice.sendMessage(phone: "+380688958285", message: "Hi, mom")
-
-SecretWatcherDelegate.messages
