@@ -11,19 +11,12 @@ import UIKit
 class ArticleViewController: UIViewController {
 
     var article: Article!
-    
-    @IBOutlet weak var cover: UIImageView!
-    @IBOutlet weak var textTitle: UILabel!
-    @IBOutlet weak var textDescription: UILabel!
-    @IBAction func openInBrowser(_ sender: Any) {
-    }
-    
-    
+    @IBOutlet weak var articleTitle: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        textTitle.text = article.title
-        textDescription.text = article.description
-        
+
+        articleTitle.text = article.title
     }
     
 
