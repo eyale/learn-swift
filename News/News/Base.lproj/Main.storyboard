@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,10 +47,69 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Articles feed" id="vg5-2a-e3h"/>
+                    <connections>
+                        <segue destination="uM6-hC-nHz" kind="show" identifier="goToArticle" id="on7-Zs-qBh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXr-dM-U9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="89.732142857142847"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="4DH-lc-337">
+            <objects>
+                <viewController id="uM6-hC-nHz" customClass="ArticleViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WoP-s1-tKq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwX-vm-7k8">
+                                <rect key="frame" x="87" y="120" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svw-or-Rf5">
+                                <rect key="frame" x="186" y="318" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhO-Pt-cVv">
+                                <rect key="frame" x="163" y="367" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4y-Ba-Vdq">
+                                <rect key="frame" x="186" y="523" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="openArticleInBrowser:" destination="uM6-hC-nHz" eventType="touchUpInside" id="Dsf-rD-an8"/>
+                                    <action selector="openInBrowser:" destination="uM6-hC-nHz" eventType="touchUpInside" id="Lwv-sO-FpD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UZW-Mz-J4T"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y5x-Pa-3j9"/>
+                    <connections>
+                        <outlet property="ArticleCover" destination="dwX-vm-7k8" id="hxf-8Q-Bs4"/>
+                        <outlet property="ArticleDescription" destination="AhO-Pt-cVv" id="Hot-eM-Rtn"/>
+                        <outlet property="ArticleTitle" destination="Svw-or-Rf5" id="fQJ-uL-Sxz"/>
+                        <outlet property="cover" destination="dwX-vm-7k8" id="SKK-Bc-2ie"/>
+                        <outlet property="description" destination="AhO-Pt-cVv" id="mS9-F7-dvN"/>
+                        <outlet property="openInBrowser" destination="S4y-Ba-Vdq" id="yFz-wJ-ATt"/>
+                        <outlet property="textDescription" destination="AhO-Pt-cVv" id="oYE-3T-Wpi"/>
+                        <outlet property="textTitle" destination="Svw-or-Rf5" id="pjv-hO-yWF"/>
+                        <outlet property="title" destination="Svw-or-Rf5" id="Xaa-mU-ALh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nX-7p-s5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.6376811594205" y="89.732142857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fGv-qd-Ma7">
