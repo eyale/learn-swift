@@ -118,6 +118,7 @@
                         <outlet property="articleDate" destination="i3p-W0-a8l" id="Vyq-cH-3Mn"/>
                         <outlet property="articleDescription" destination="G6p-8G-LUW" id="zb5-Ui-OVs"/>
                         <outlet property="articleTitle" destination="6mT-Nv-I25" id="r6G-NN-a2Q"/>
+                        <outlet property="imageLoader" destination="1si-7q-imQ" id="6Lv-5Q-Qsj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBk-f8-XbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

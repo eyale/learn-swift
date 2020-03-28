@@ -11,6 +11,7 @@ import UIKit
 class ArticleViewController: UIViewController {
 
     var article: Article!
+    @IBOutlet weak var imageLoader: UIActivityIndicatorView!
     @IBOutlet weak var articleCover: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleAuthor: UILabel!
@@ -26,10 +27,13 @@ class ArticleViewController: UIViewController {
         articleAuthor.text = article.author
         articleDate.text = article.publishedAt
         articleDescription.text = article.description
+        self.imageLoader.hidesWhenStopped = true
         DispatchQueue.main.async {
             if let imageURL = URL(string: self.article.urlToImage) {
                 if let imageData = try? Data(contentsOf: imageURL) {
                     self.articleCover.image = UIImage(data: imageData)
+                } else {
+                    self.imageLoader.stopAnimating()
                 }
             }
         }
