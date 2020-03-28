@@ -11,12 +11,29 @@ import UIKit
 class ArticleViewController: UIViewController {
 
     var article: Article!
+    @IBOutlet weak var articleCover: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
-
+    @IBOutlet weak var articleAuthor: UILabel!
+    @IBOutlet weak var articleDate: UILabel!
+    @IBOutlet weak var articleDescription: UILabel!
+    @IBAction func openInBrower(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         articleTitle.text = article.title
+        articleAuthor.text = article.author
+        articleDate.text = article.publishedAt
+        articleDescription.text = article.description
+        DispatchQueue.main.async {
+            if let imageURL = URL(string: self.article.urlToImage) {
+                if let imageData = try? Data(contentsOf: imageURL) {
+                    self.articleCover.image = UIImage(data: imageData)
+                }
+            }
+        }
+        
     }
     
 
