@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ArticleViewController: UIViewController {
 
@@ -18,7 +19,12 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var articleDate: UILabel!
     @IBOutlet weak var articleDescription: UILabel!
     @IBAction func openInBrower(_ sender: Any) {
+        if let articleURL = URL(string: article.url) {
+            let safariVC = SFSafariViewController(url: articleURL)
+            present(safariVC, animated: true, completion: nil)
+        }
     }
+    @IBOutlet weak var openInBrowserButtonView: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +42,9 @@ class ArticleViewController: UIViewController {
                     self.imageLoader.stopAnimating()
                 }
             }
+        }
+        if URL(string: article.url) == nil {
+            openInBrowserButtonView.isHidden = true
         }
         
     }
