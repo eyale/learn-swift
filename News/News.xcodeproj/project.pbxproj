@@ -17,6 +17,7 @@
 		7D666E3B242DF9A600E67C12 /* variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D666E3A242DF9A600E67C12 /* variables.swift */; };
 		7D666E3F242E400200E67C12 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D666E3E242E400200E67C12 /* TableViewController.swift */; };
 		7D666E49242E80CF00E67C12 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D666E48242E80CF00E67C12 /* ArticleViewController.swift */; };
+		7D666E4B242F6E6A00E67C12 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D666E4A242F6E6A00E67C12 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7D666E3A242DF9A600E67C12 /* variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variables.swift; sourceTree = "<group>"; };
 		7D666E3E242E400200E67C12 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7D666E48242E80CF00E67C12 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		7D666E4A242F6E6A00E67C12 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				7D06340A242D577D00381033 /* Info.plist */,
 				7D666E3E242E400200E67C12 /* TableViewController.swift */,
 				7D666E48242E80CF00E67C12 /* ArticleViewController.swift */,
+				7D666E4A242F6E6A00E67C12 /* PageViewController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				7D0633FD242D577D00381033 /* AppDelegate.swift in Sources */,
 				7D0633FF242D577D00381033 /* SceneDelegate.swift in Sources */,
 				7D666E3B242DF9A600E67C12 /* variables.swift in Sources */,
+				7D666E4B242F6E6A00E67C12 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

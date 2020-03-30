@@ -8,10 +8,12 @@
 
 import Foundation
 
+// ToDo: on launch recalculate new newsURL with carrent date
+// ToDo: adjust (if urlFile != nil) - condition with currentDate
 class Variables {
-    static let newsAPIDOTorgKey: String = "4e0dc7fc1e004e0eadb4a4b9dae01248"
+    static let newsAPIDOTorgKey: String = "a043af83b2ef483b8362fcf292557608"
     static let newsURL = URL(string:
-        "http://newsapi.org/v2/everything?q=bitcoin&from=2020-02-27&sortBy=publishedAt&apiKey=4e0dc7fc1e004e0eadb4a4b9dae01248")
+        "http://newsapi.org/v2/everything?q=bitcoin&from=2020-02-29&sortBy=publishedAt&apiKey=a043af83b2ef483b8362fcf292557608")
 }
 
 var articles: [Article] = []

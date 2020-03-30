@@ -11,6 +11,7 @@ import SafariServices
 
 class ArticleViewController: UIViewController {
 
+    var index: Int = 0
     var article: Article!
     @IBOutlet weak var imageLoader: UIActivityIndicatorView!
     @IBOutlet weak var articleCover: UIImageView!
