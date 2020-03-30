@@ -9,6 +9,15 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    @IBAction func refreshControl(_ sender: Any) {
+        fetchArticles {
+            DispatchQueue.main.async {
+                self.refreshControl?.endRefreshing()
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +27,6 @@ class TableViewController: UITableViewController {
             }
         }
     }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
