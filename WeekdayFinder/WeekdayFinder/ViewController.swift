@@ -10,13 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var dayTF: UITextField!
-    @IBOutlet var monthTF: UITextField!
-    @IBOutlet var yearTF: UITextField!
-    @IBOutlet var resultLabel: UILabel!
+    @IBOutlet weak var dayTF: UITextField!
+    @IBOutlet weak var monthTF: UITextField!
+    @IBOutlet weak var yearTF: UITextField!
+    @IBOutlet weak var weekDayResult: UILabel!
     
-    @IBAction func findDay() {
-    
+    @IBAction func findWeekDay() {
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+        
+        guard let day = dayTF.text, let month = monthTF.text, let year = yearTF.text  else {
+            return
+        }
+        dateComponents.day = Int(day)
+        dateComponents.month = Int(month)
+        dateComponents.year = Int(year)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        
+        guard let date = calendar.date(from: dateComponents) else {
+            return
+        }
+        
+        let weekDay = dateFormatter.string(from: date)
+        print(weekDay)
+        weekDayResult.text = weekDay
     }
     
     override func viewDidLoad() {
