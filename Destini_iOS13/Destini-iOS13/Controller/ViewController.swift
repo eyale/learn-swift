@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         storyLabel.text = storyBrain.getTitle()
         choice1Button.setTitle(storyBrain.getChoice1(), for: .normal)
         choice2Button.setTitle(storyBrain.getChoice2(), for: .normal)
-        
     }
     
 }
