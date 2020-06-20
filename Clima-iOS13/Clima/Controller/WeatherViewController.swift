@@ -80,8 +80,6 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
         }
-        
-        print("didUpdateWeather: \(weather.cityName)")
     }
     func  didFailWithError(_ error: Error) {
         print(error)
@@ -90,7 +88,6 @@ extension WeatherViewController: WeatherManagerDelegate {
 
 //MARK: - CLLocationManagerDelegate
 extension WeatherViewController: CLLocationManagerDelegate {
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             locationManager.stopUpdatingLocation()

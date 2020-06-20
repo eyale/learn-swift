@@ -475,5 +475,3 @@ import UIKit
 //Simple.singleton
 //Simple.str
 //Simple.staticZen()
-
-

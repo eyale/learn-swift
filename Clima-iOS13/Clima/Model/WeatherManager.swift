@@ -15,11 +15,6 @@ protocol WeatherManagerDelegate {
 }
 
 struct WeatherManager {
-    //    var urlComponents = URLComponents()
-    //    urlComponents.scheme = "https"
-    //    urlComponents.host = "pokeapi.co"
-    //    urlComponents.path = "/api/v2/pokemon/\(id)"
-    //    return urlComponents.url!
     let url = "https://api.openweathermap.org/data/2.5/weather?appid=88dfe612a9b31f32b091650395a238e1&units=metric"
     let iconName = "sun.min"
     var delegate: WeatherManagerDelegate?

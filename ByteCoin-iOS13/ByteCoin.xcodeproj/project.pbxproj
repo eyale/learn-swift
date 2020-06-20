@@ -7,35 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D3F9E5A2482CC4D00D028E5 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F9E592482CC4D00D028E5 /* WeatherManager.swift */; };
-		7D3F9E5C2482CCB600D028E5 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F9E5B2482CCB600D028E5 /* WeatherData.swift */; };
-		7D3F9E5E2482E17800D028E5 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F9E5D2482E17800D028E5 /* WeatherModel.swift */; };
-		ADAA27B1231BBFAF00365194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B0231BBFAF00365194 /* AppDelegate.swift */; };
-		ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */; };
-		ADAA27B5231BBFAF00365194 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B4231BBFAF00365194 /* WeatherViewController.swift */; };
-		ADAA27B8231BBFAF00365194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27B6231BBFAF00365194 /* Main.storyboard */; };
-		ADAA27BA231BBFB300365194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27B9231BBFB300365194 /* Assets.xcassets */; };
-		ADAA27BD231BBFB300365194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27BB231BBFB300365194 /* LaunchScreen.storyboard */; };
-		ADAA27CE231BC87F00365194 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27CD231BC87F00365194 /* README.md */; };
+		7D2D26DE2494DE8B005377A0 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D26DD2494DE8B005377A0 /* CoinModel.swift */; };
+		7D2D26E02494E0A4005377A0 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D26DF2494E0A4005377A0 /* CoinData.swift */; };
+		ADA8AC092329367100626376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8AC082329367100626376 /* AppDelegate.swift */; };
+		ADA8AC0B2329367100626376 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8AC0A2329367100626376 /* SceneDelegate.swift */; };
+		ADA8AC0D2329367100626376 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8AC0C2329367100626376 /* ViewController.swift */; };
+		ADA8AC102329367100626376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA8AC0E2329367100626376 /* Main.storyboard */; };
+		ADA8AC122329367300626376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA8AC112329367300626376 /* Assets.xcassets */; };
+		ADA8AC152329367300626376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA8AC132329367300626376 /* LaunchScreen.storyboard */; };
+		ADA8AC202329398300626376 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA8AC1F2329398300626376 /* CoinManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D3F9E592482CC4D00D028E5 /* WeatherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
-		7D3F9E5B2482CCB600D028E5 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
-		7D3F9E5D2482E17800D028E5 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
-		ADAA27AD231BBFAF00365194 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADAA27B0231BBFAF00365194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADAA27B4231BBFAF00365194 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		ADAA27B7231BBFAF00365194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ADAA27B9231BBFB300365194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ADAA27BC231BBFB300365194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ADAA27BE231BBFB300365194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADAA27CD231BC87F00365194 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D2D26DD2494DE8B005377A0 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		7D2D26DF2494E0A4005377A0 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		ADA8AC052329367100626376 /* ByteCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA8AC082329367100626376 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADA8AC0A2329367100626376 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ADA8AC0C2329367100626376 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADA8AC0F2329367100626376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADA8AC112329367300626376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADA8AC142329367300626376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADA8AC162329367300626376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADA8AC1F2329398300626376 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ADAA27AA231BBFAF00365194 /* Frameworks */ = {
+		ADA8AC022329367100626376 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,100 +43,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7D3F9E562482CC0F00D028E5 /* Model */ = {
+		ADA8ABFC2329367100626376 = {
 			isa = PBXGroup;
 			children = (
-				7D3F9E592482CC4D00D028E5 /* WeatherManager.swift */,
-				7D3F9E5B2482CCB600D028E5 /* WeatherData.swift */,
-				7D3F9E5D2482E17800D028E5 /* WeatherModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		ADAA27A4231BBFAF00365194 = {
-			isa = PBXGroup;
-			children = (
-				ADAA27CD231BC87F00365194 /* README.md */,
-				ADAA27AF231BBFAF00365194 /* Clima */,
-				ADAA27AE231BBFAF00365194 /* Products */,
+				ADA8AC072329367100626376 /* ByteCoin */,
+				ADA8AC062329367100626376 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ADAA27AE231BBFAF00365194 /* Products */ = {
+		ADA8AC062329367100626376 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADAA27AD231BBFAF00365194 /* Clima.app */,
+				ADA8AC052329367100626376 /* ByteCoin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADAA27AF231BBFAF00365194 /* Clima */ = {
+		ADA8AC072329367100626376 /* ByteCoin */ = {
 			isa = PBXGroup;
 			children = (
-				ADAA27B0231BBFAF00365194 /* AppDelegate.swift */,
-				ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */,
-				7D3F9E562482CC0F00D028E5 /* Model */,
-				ADAA27C8231BC3E500365194 /* Controller */,
-				ADAA27C9231BC3F200365194 /* View */,
-				ADAA27B9231BBFB300365194 /* Assets.xcassets */,
-				ADAA27BB231BBFB300365194 /* LaunchScreen.storyboard */,
-				ADAA27BE231BBFB300365194 /* Info.plist */,
+				ADA8AC082329367100626376 /* AppDelegate.swift */,
+				ADA8AC0A2329367100626376 /* SceneDelegate.swift */,
+				ADA8AC1E2329370F00626376 /* Model */,
+				ADA8AC1D2329370700626376 /* Controller */,
+				ADA8AC1C232936FE00626376 /* View */,
+				ADA8AC112329367300626376 /* Assets.xcassets */,
+				ADA8AC132329367300626376 /* LaunchScreen.storyboard */,
+				ADA8AC162329367300626376 /* Info.plist */,
 			);
-			path = Clima;
+			path = ByteCoin;
 			sourceTree = "<group>";
 		};
-		ADAA27C8231BC3E500365194 /* Controller */ = {
+		ADA8AC1C232936FE00626376 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ADAA27B4231BBFAF00365194 /* WeatherViewController.swift */,
+				ADA8AC0E2329367100626376 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADA8AC1D2329370700626376 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADA8AC0C2329367100626376 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		ADAA27C9231BC3F200365194 /* View */ = {
+		ADA8AC1E2329370F00626376 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ADAA27B6231BBFAF00365194 /* Main.storyboard */,
+				ADA8AC1F2329398300626376 /* CoinManager.swift */,
+				7D2D26DF2494E0A4005377A0 /* CoinData.swift */,
+				7D2D26DD2494DE8B005377A0 /* CoinModel.swift */,
 			);
-			path = View;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADAA27AC231BBFAF00365194 /* Clima */ = {
+		ADA8AC042329367100626376 /* ByteCoin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADAA27C1231BBFB300365194 /* Build configuration list for PBXNativeTarget "Clima" */;
+			buildConfigurationList = ADA8AC192329367300626376 /* Build configuration list for PBXNativeTarget "ByteCoin" */;
 			buildPhases = (
-				ADAA27A9231BBFAF00365194 /* Sources */,
-				ADAA27AA231BBFAF00365194 /* Frameworks */,
-				ADAA27AB231BBFAF00365194 /* Resources */,
+				ADA8AC012329367100626376 /* Sources */,
+				ADA8AC022329367100626376 /* Frameworks */,
+				ADA8AC032329367100626376 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Clima;
-			productName = Clima;
-			productReference = ADAA27AD231BBFAF00365194 /* Clima.app */;
+			name = ByteCoin;
+			productName = ByteCoin;
+			productReference = ADA8AC052329367100626376 /* ByteCoin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ADAA27A5231BBFAF00365194 /* Project object */ = {
+		ADA8ABFD2329367100626376 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "App Brewery";
+				ORGANIZATIONNAME = "The App Brewery";
 				TargetAttributes = {
-					ADAA27AC231BBFAF00365194 = {
+					ADA8AC042329367100626376 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = ADAA27A8231BBFAF00365194 /* Build configuration list for PBXProject "Clima" */;
+			buildConfigurationList = ADA8AC002329367100626376 /* Build configuration list for PBXProject "ByteCoin" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,59 +143,58 @@
 				en,
 				Base,
 			);
-			mainGroup = ADAA27A4231BBFAF00365194;
-			productRefGroup = ADAA27AE231BBFAF00365194 /* Products */;
+			mainGroup = ADA8ABFC2329367100626376;
+			productRefGroup = ADA8AC062329367100626376 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADAA27AC231BBFAF00365194 /* Clima */,
+				ADA8AC042329367100626376 /* ByteCoin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ADAA27AB231BBFAF00365194 /* Resources */ = {
+		ADA8AC032329367100626376 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADAA27CE231BC87F00365194 /* README.md in Resources */,
-				ADAA27BD231BBFB300365194 /* LaunchScreen.storyboard in Resources */,
-				ADAA27BA231BBFB300365194 /* Assets.xcassets in Resources */,
-				ADAA27B8231BBFAF00365194 /* Main.storyboard in Resources */,
+				ADA8AC152329367300626376 /* LaunchScreen.storyboard in Resources */,
+				ADA8AC122329367300626376 /* Assets.xcassets in Resources */,
+				ADA8AC102329367100626376 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ADAA27A9231BBFAF00365194 /* Sources */ = {
+		ADA8AC012329367100626376 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADAA27B5231BBFAF00365194 /* WeatherViewController.swift in Sources */,
-				7D3F9E5C2482CCB600D028E5 /* WeatherData.swift in Sources */,
-				ADAA27B1231BBFAF00365194 /* AppDelegate.swift in Sources */,
-				7D3F9E5A2482CC4D00D028E5 /* WeatherManager.swift in Sources */,
-				7D3F9E5E2482E17800D028E5 /* WeatherModel.swift in Sources */,
-				ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */,
+				7D2D26E02494E0A4005377A0 /* CoinData.swift in Sources */,
+				7D2D26DE2494DE8B005377A0 /* CoinModel.swift in Sources */,
+				ADA8AC202329398300626376 /* CoinManager.swift in Sources */,
+				ADA8AC0D2329367100626376 /* ViewController.swift in Sources */,
+				ADA8AC092329367100626376 /* AppDelegate.swift in Sources */,
+				ADA8AC0B2329367100626376 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ADAA27B6231BBFAF00365194 /* Main.storyboard */ = {
+		ADA8AC0E2329367100626376 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ADAA27B7231BBFAF00365194 /* Base */,
+				ADA8AC0F2329367100626376 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		ADAA27BB231BBFB300365194 /* LaunchScreen.storyboard */ = {
+		ADA8AC132329367300626376 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ADAA27BC231BBFB300365194 /* Base */,
+				ADA8AC142329367300626376 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -206,7 +202,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ADAA27BF231BBFB300365194 /* Debug */ = {
+		ADA8AC172329367300626376 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,7 +262,7 @@
 			};
 			name = Debug;
 		};
-		ADAA27C0231BBFB300365194 /* Release */ = {
+		ADA8AC182329367300626376 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -320,39 +316,37 @@
 			};
 			name = Release;
 		};
-		ADAA27C2231BBFB300365194 /* Debug */ = {
+		ADA8AC1A2329367300626376 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Clima/Info.plist;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				INFOPLIST_FILE = ByteCoin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = clima;
+				PRODUCT_BUNDLE_IDENTIFIER = co.appbrewery.ByteCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		ADAA27C3231BBFB300365194 /* Release */ = {
+		ADA8AC1B2329367300626376 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Clima/Info.plist;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				INFOPLIST_FILE = ByteCoin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = clima;
+				PRODUCT_BUNDLE_IDENTIFIER = co.appbrewery.ByteCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,25 +355,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADAA27A8231BBFAF00365194 /* Build configuration list for PBXProject "Clima" */ = {
+		ADA8AC002329367100626376 /* Build configuration list for PBXProject "ByteCoin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADAA27BF231BBFB300365194 /* Debug */,
-				ADAA27C0231BBFB300365194 /* Release */,
+				ADA8AC172329367300626376 /* Debug */,
+				ADA8AC182329367300626376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADAA27C1231BBFB300365194 /* Build configuration list for PBXNativeTarget "Clima" */ = {
+		ADA8AC192329367300626376 /* Build configuration list for PBXNativeTarget "ByteCoin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADAA27C2231BBFB300365194 /* Debug */,
-				ADAA27C3231BBFB300365194 /* Release */,
+				ADA8AC1A2329367300626376 /* Debug */,
+				ADA8AC1B2329367300626376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ADAA27A5231BBFAF00365194 /* Project object */;
+	rootObject = ADA8ABFD2329367100626376 /* Project object */;
 }
