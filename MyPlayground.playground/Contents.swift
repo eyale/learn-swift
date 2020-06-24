@@ -475,3 +475,22 @@ import UIKit
 //Simple.singleton
 //Simple.str
 //Simple.staticZen()
+
+
+func fibonacci(n: Int) {
+    var arr: [Int] = []
+    for index in 0..<n {
+        if index == 0 {
+            arr.append(index)
+        } else if index == 1 {
+            arr.append(index)
+        } else {
+            let prevVal = arr[index-1]
+            let prevPrevVal = arr[index-2]
+            arr.append(prevVal + prevPrevVal)
+        }
+    }
+    print(arr)
+}
+
+fibonacci(n: 10)
