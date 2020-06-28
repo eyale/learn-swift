@@ -81,7 +81,7 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.cityLabel.text = weather.cityName
         }
     }
-    func  didFailWithError(_ error: Error) {
+    func didFailWithError(_ error: Error) {
         print(error)
     }
 }

@@ -16,11 +16,7 @@ class ChatViewController: UIViewController {
 
     let db = Firestore.firestore()
 
-    var messages: [Message] = [
-        Message(sender: "123@123.com", body: "Hi"),
-        Message(sender: "aksjdhkjsakjd@adjsalkjdlkasjdl.com", body: "Hello"),
-        Message(sender: "123@123.com", body: "How are you?")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +29,40 @@ class ChatViewController: UIViewController {
 
         //MARK: - Register Nib as CellView
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+
+        loadMessages()
     }
-    
+
+    func loadMessages() {
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { (snapshot, error) in
+                if let e = error {
+                    let alert = UIAlertController(title: "Error!", message: e.localizedDescription, preferredStyle: .actionSheet)
+                    let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+
+                    alert.addAction(alertAction)
+                    self.present(alert, animated: true)
+                } else {
+                    self.messages = []
+                    if let snapshotDocuments = snapshot?.documents {
+                        for documents in snapshotDocuments {
+                            let message = documents.data()
+                            if let messageSender = message[K.FStore.senderField] as? String,
+                                let messageBody = message[K.FStore.bodyField] as? String {
+                                let newMessage = Message(sender: messageSender, body: messageBody)
+                                self.messages.append(newMessage)
+
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         do {
             try Auth.auth().signOut()
@@ -74,25 +102,29 @@ extension ChatViewController: UITextFieldDelegate {
             return false
         }
     }
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        messageTextfield.text = ""
-//    }
+    //    func textFieldDidEndEditing(_ textField: UITextField) {
+    //        messageTextfield.text = ""
+    //    }
     @IBAction func sendPressed(_ sender: UIButton) {
-           if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
-               db.collection(K.FStore.collectionName)
-                   .addDocument(data: [K.FStore.senderField :messageSender, K.FStore.bodyField: messageBody]) { error in
-                       if let e = error {
-                           let alert = UIAlertController(title: "Error while saving your message!", message: e.localizedDescription, preferredStyle: .actionSheet)
-                           let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(K.FStore.collectionName)
+                .addDocument(data: [
+                    K.FStore.senderField :messageSender,
+                    K.FStore.bodyField: messageBody,
+                    K.FStore.dateField: Date().timeIntervalSince1970
+                ]) { error in
+                    if let e = error {
+                        let alert = UIAlertController(title: "Error while saving your message!", message: e.localizedDescription, preferredStyle: .actionSheet)
+                        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
 
-                           alert.addAction(alertAction)
-                           self.present(alert, animated: true)
-                       } else {
-                           print("Message was saved successfully")
-                       }
-               }
-           }
+                        alert.addAction(alertAction)
+                        self.present(alert, animated: true)
+                    } else {
+                        print("Message was saved successfully")
+                    }
+            }
+        }
         messageTextfield.endEditing(true)
         messageTextfield.text = ""
-       }
+    }
 }
