@@ -253,6 +253,8 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 1.30905.0)
+  - FirebaseFirestoreSwift (0.3.0):
+    - FirebaseFirestore (>= 1.6.1, ~> 1.6)
   - GoogleDataTransport (6.2.1)
   - GoogleDataTransportCCTSupport (3.2.0):
     - GoogleDataTransport (~> 6.1)
@@ -297,6 +299,7 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.4.0)
+  - IQKeyboardManagerSwift (6.5.5)
   - leveldb-library (1.22)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
@@ -309,6 +312,8 @@ DEPENDENCIES:
   - CLTypingLabel (~> 0.4.0)
   - Firebase/Auth
   - Firebase/Firestore
+  - FirebaseFirestoreSwift
+  - IQKeyboardManagerSwift
 
 SPEC REPOS:
   trunk:
@@ -320,12 +325,14 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
+    - FirebaseFirestoreSwift
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -339,16 +346,18 @@ SPEC CHECKSUMS:
   FirebaseCore: feda061cb1ee6d8ad4824f4a4a8ffbcfe284f595
   FirebaseCoreDiagnostics: 4505e4d4009b1d93f605088ee7d7764d5f0d1c84
   FirebaseFirestore: 4291ab811ad323a2b807a4a481cd5df2e445a676
+  FirebaseFirestoreSwift: 0cda93628782ca5a817cfecd2a8c0187436c0ae5
   GoogleDataTransport: 9a8a16f79feffc7f42096743de2a7c4815e84020
   GoogleDataTransportCCTSupport: 489c1265d2c85b68187a83a911913d190012158d
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
 
-PODFILE CHECKSUM: 9eac9901f31ce47a802936d01e0adef801588538
+PODFILE CHECKSUM: 8e42502ad5ef23fc803f4aac8d0f8f00bf30a6a6
 
 COCOAPODS: 1.9.3
