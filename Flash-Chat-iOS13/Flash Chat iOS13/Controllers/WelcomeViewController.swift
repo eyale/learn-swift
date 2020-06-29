@@ -8,16 +8,22 @@
 
 import UIKit
 import CLTypingLabel
-import IQKeyboardManagerSwift
 
 class WelcomeViewController: UIViewController {
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
     
     @IBOutlet weak var titleLabel: CLTypingLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        IQKeyboardManager.shared.enable = true
 
         titleLabel.charInterval = 0.07
         titleLabel.text = K.appName
@@ -32,20 +38,3 @@ class WelcomeViewController: UIViewController {
         //        }
     }
 }
-
-//MARK: - hideKeyboardWhenTappedAround
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-}
-

@@ -29,6 +29,7 @@ class ChatViewController: UIViewController {
 
         //MARK: - Register Nib as CellView
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        tableView.isUserInteractionEnabled = false
 
         loadMessages()
     }
@@ -54,7 +55,9 @@ class ChatViewController: UIViewController {
                                 self.messages.append(newMessage)
 
                                 DispatchQueue.main.async {
+                                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
                                     self.tableView.reloadData()
+                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                                 }
                             }
                         }
@@ -80,31 +83,26 @@ extension ChatViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        let messageIndex = indexPath.row
-        cell.label.text = messages[messageIndex].body
+        cell.label.text = message.body
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lighBlue)
+            cell.label.textColor = UIColor(named: K.BrandColors.blue)
+        } else {
+            cell.rightImageView.isHidden = true
+            cell.leftImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            cell.label.textColor = UIColor(named: K.BrandColors.purple)
+        }
         return cell
     }
 }
 
 //MARK: - UITextFieldDelegate
 extension ChatViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.hideKeyboardWhenTappedAround()
-        messageTextfield.endEditing(true)
-        return true
-    }
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if messageTextfield.text != "" {
-            return true
-        } else {
-            messageTextfield.placeholder = "Write a message..."
-            return false
-        }
-    }
-    //    func textFieldDidEndEditing(_ textField: UITextField) {
-    //        messageTextfield.text = ""
-    //    }
     @IBAction func sendPressed(_ sender: UIButton) {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName)
@@ -121,10 +119,11 @@ extension ChatViewController: UITextFieldDelegate {
                         self.present(alert, animated: true)
                     } else {
                         print("Message was saved successfully")
+                        DispatchQueue.main.async {
+                            self.messageTextfield.text = ""
+                        }
                     }
             }
         }
-        messageTextfield.endEditing(true)
-        messageTextfield.text = ""
     }
 }
