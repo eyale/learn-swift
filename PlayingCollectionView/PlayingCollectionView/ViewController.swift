@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+  @IBOutlet weak var datePicker: UIDatePicker!
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
 
+    datePicker.datePickerMode = UIDatePicker.Mode.date
+    datePicker.minimumDate = Date()
+    //    datePicker.date = Date()
 
+    datePicker.subviews[0].subviews[0].subviews[1].isHidden = true
+  }
+  @IBAction func onChangeDatePicker(_ sender: UIDatePicker) {
+    print(sender.date)
+  }
 }
-

@@ -476,21 +476,32 @@ import UIKit
 //Simple.str
 //Simple.staticZen()
 
+//
+//func fibonacci(n: Int) {
+//    var arr: [Int] = []
+//    for index in 0..<n {
+//        if index == 0 {
+//            arr.append(index)
+//        } else if index == 1 {
+//            arr.append(index)
+//        } else {
+//            let prevVal = arr[index-1]
+//            let prevPrevVal = arr[index-2]
+//            arr.append(prevVal + prevPrevVal)
+//        }
+//    }
+//    print(arr)
+//}
+//
+//fibonacci(n: 10)
 
-func fibonacci(n: Int) {
-    var arr: [Int] = []
-    for index in 0..<n {
-        if index == 0 {
-            arr.append(index)
-        } else if index == 1 {
-            arr.append(index)
-        } else {
-            let prevVal = arr[index-1]
-            let prevPrevVal = arr[index-2]
-            arr.append(prevVal + prevPrevVal)
-        }
-    }
-    print(arr)
-}
+//let timeStamp = Date("1595570400")
+//let startTime = Date(timeIntervalSince1970:  as! Double)
+//let time = NSDate(timeIntervalSince1970: TimeInterval(startTime))
+// print(timeStamp)
 
-fibonacci(n: 10)
+//let timestamp = NSDate().timeIntervalSince1970
+//let myTimeInterval = TimeInterval(timestamp)
+//let time = NSDate(timeIntervalSince1970: TimeInterval(myTimeInterval))
+//
+//print(timestamp.description, time)

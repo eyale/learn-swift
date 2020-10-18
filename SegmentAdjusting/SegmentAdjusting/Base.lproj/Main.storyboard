@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SegmentVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SegmentVC" customModule="SegmentAdjusting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I7J-3Z-Vhw">
+                                <rect key="frame" x="20" y="76" width="374" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Sw7-s8-x4P"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Upcoming work"/>
+                                    <segment title="Recent Work"/>
+                                </segments>
+                                <color key="tintColor" name="seafoamBlue"/>
+                                <color key="selectedSegmentTintColor" name="seafoamBlue"/>
+                                <connections>
+                                    <action selector="didSegmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="DUM-HK-2Jd"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTt-cp-kB5" userLabel="Upcoming Container View">
+                                <rect key="frame" x="0.0" y="119" width="414" height="743"/>
+                                <connections>
+                                    <segue destination="kMG-WU-DIQ" kind="embed" id="4xE-Jo-exM"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ko-aE-fvD" userLabel="Recent Container View">
+                                <rect key="frame" x="0.0" y="119" width="414" height="743"/>
+                                <connections>
+                                    <segue destination="TuY-BX-wV3" kind="embed" id="PXF-5K-4Dm"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jTt-cp-kB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Rs-Jl-azx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jTt-cp-kB5" secondAttribute="trailing" id="4v8-dx-mhU"/>
+                            <constraint firstItem="4Ko-aE-fvD" firstAttribute="top" secondItem="I7J-3Z-Vhw" secondAttribute="bottom" constant="5" id="7mj-QK-Bhi"/>
+                            <constraint firstItem="4Ko-aE-fvD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8GH-U7-d1V"/>
+                            <constraint firstItem="jTt-cp-kB5" firstAttribute="top" secondItem="I7J-3Z-Vhw" secondAttribute="bottom" constant="5" id="AqM-xr-ul6"/>
+                            <constraint firstItem="4Ko-aE-fvD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BJv-IQ-kVA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I7J-3Z-Vhw" secondAttribute="trailing" constant="20" id="IDT-W1-7hb"/>
+                            <constraint firstItem="I7J-3Z-Vhw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hx2-kX-aWh"/>
+                            <constraint firstItem="4Ko-aE-fvD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="krc-RS-brG"/>
+                            <constraint firstItem="I7J-3Z-Vhw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="pTL-D1-tnJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jTt-cp-kB5" secondAttribute="bottom" id="tf8-Ch-17e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="recentContainerView" destination="4Ko-aE-fvD" id="QgF-Sf-4ji"/>
+                        <outlet property="segment" destination="I7J-3Z-Vhw" id="pe9-Tp-nYZ"/>
+                        <outlet property="upcomingContainerView" destination="jTt-cp-kB5" id="sdw-zs-GNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-294.20289855072468" y="-50.223214285714285"/>
+        </scene>
+        <!--Recent Work-->
+        <scene sceneID="6kE-oI-yqQ">
+            <objects>
+                <viewController id="kMG-WU-DIQ" userLabel="Recent Work" customClass="RecentVC" customModule="SegmentAdjusting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r6b-gX-9u9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="743"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.69031567260000004" green="0.51541389530000004" blue="0.62139620269999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="ajo-D5-jvg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szP-Yd-s8B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="665"/>
+        </scene>
+        <!--Upcoming Work-->
+        <scene sceneID="rTm-Uf-4gR">
+            <objects>
+                <viewController id="TuY-BX-wV3" userLabel="Upcoming Work" customClass="UpcomingVC" customModule="SegmentAdjusting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6bE-b9-3qx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="743"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="yVI-hv-7Ii"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psK-mB-dMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-641" y="665"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="seafoamBlue">
+            <color red="0.43500000238418579" green="0.84299999475479126" blue="0.84299999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

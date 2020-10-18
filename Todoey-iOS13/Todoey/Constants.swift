@@ -12,4 +12,5 @@ struct K {
     static let cellIdentifier = "ToDoItemCell"
     static let defaultsArrayName = "ToDoListArray"
     static let plistFileName = "Items.plist"
+    static let dataModelFileName = "DataModel"
 }
