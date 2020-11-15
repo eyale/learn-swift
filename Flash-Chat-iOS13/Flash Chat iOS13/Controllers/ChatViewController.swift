@@ -76,7 +76,7 @@ class ChatViewController: UIViewController {
     }
 }
 
-//MARK: - UITableViewDataSource - responsible to populating the TableView (how many cells....etc)
+//MARK: - UITableViewDataSource - responsible for populating the TableView (how many cells....etc)
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
